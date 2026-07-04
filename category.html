@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>茶叶种类 - 茶文化科普</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">🍃 茶文化<span>科普</span></a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">首页</a></li>
+                    <li class="has-dropdown">
+                        <a href="category.html" class="active">茶叶百科 ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="category.html" class="active">茶叶种类</a></li>
+                            <li><a href="detail.html?type=green">六大茶类详情</a></li>
+                            <li><a href="famous-tea.html">中国名茶榜</a></li>
+                            <li><a href="zijin-chancha.html">紫金蝉茶</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="history.html">茶文化 ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="history.html">茶的历史</a></li>
+                            <li><a href="tea-culture.html">茶道与哲学</a></li>
+                            <li><a href="etiquette.html">茶的礼仪</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="knowledge.html">科普中心 ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="knowledge.html">科普知识</a></li>
+                            <li><a href="tea-benefits.html">茶叶健康功效</a></li>
+                            <li><a href="brewing-guide.html">冲泡指南</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="teaware.html">茶具图鉴</a></li>
+                    <li><a href="consult.html">在线咨询</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>🍵 茶叶种类</h1>
+                <p>从六大茶类到家乡味道，带你认识茶的万千风情</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">📖 六大茶类</h2>
+                <p class="section-subtitle">按发酵程度从低到高，认识中国茶的基本分类</p>
+
+                <div class="card-grid">
+                    <div class="tea-card" onclick="location.href='detail.html?type=green'">
+                        <img src="./img/lvchad.jpg" alt="绿茶" />
+                        <div class="tea-card-body">
+                            <span class="badge green">不发酵</span>
+                            <h3>绿茶</h3>
+                            <p>清汤绿叶，鲜爽甘醇。代表：龙井、碧螺春、黄山毛峰</p>
+                        </div>
+                    </div>
+                    <div class="tea-card" onclick="location.href='detail.html?type=white'">
+                        <img src="./img/baicha.jpg" alt="白茶" />
+                        <div class="tea-card-body">
+                            <span class="badge white-tea">微发酵</span>
+                            <h3>白茶</h3>
+                            <p>满披白毫，毫香清鲜。代表：白毫银针、白牡丹、寿眉</p>
+                        </div>
+                    </div>
+                    <div class="tea-card" onclick="location.href='detail.html?type=yellow'">
+                        <img src="./img/huangchad.jpg" alt="黄茶" />
+                        <div class="tea-card-body">
+                            <span class="badge yellow-tea">轻发酵</span>
+                            <h3>黄茶</h3>
+                            <p>黄汤黄叶，温和醇厚。代表：君山银针、蒙顶黄芽</p>
+                        </div>
+                    </div>
+                    <div class="tea-card" onclick="location.href='detail.html?type=oolong'">
+                        <img src="./img/qingchad.jpg" alt="青茶" />
+                        <div class="tea-card-body">
+                            <span class="badge oolong">半发酵</span>
+                            <h3>青茶（乌龙茶）</h3>
+                            <p>绿叶红镶边，花果香馥郁。代表：铁观音、大红袍、凤凰单丛</p>
+                            <p class="hint">✨ 广东紫金的蝉茶也是其中独具特色的一员</p>
+                        </div>
+                    </div>
+                    <div class="tea-card" onclick="location.href='detail.html?type=black'">
+                        <img src="./img/hongcha.jpg" alt="红茶" />
+                        <div class="tea-card-body">
+                            <span class="badge black-tea">全发酵</span>
+                            <h3>红茶</h3>
+                            <p>红汤红叶，甜醇温暖。代表：正山小种、祁门红茶、滇红</p>
+                        </div>
+                    </div>
+                    <div class="tea-card" onclick="location.href='detail.html?type=dark'">
+                        <img src="./img/heicha.jpg" alt="黑茶" />
+                        <div class="tea-card-body">
+                            <span class="badge dark-tea">后发酵</span>
+                            <h3>黑茶</h3>
+                            <p>陈香醇厚，越陈越香。代表：普洱茶、安化黑茶、六堡茶</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-tea">
+            <div class="container">
+                <div class="featured-card" onclick="location.href='zijin-chancha.html'">
+                    <div class="featured-image">
+                        <img src="./img/chanchachatang.jpg" alt="紫金蝉茶茶园" />
+                        <div class="featured-badge">🌟 家乡特色</div>
+                    </div>
+                    <div class="featured-content">
+                        <h2>紫金蝉茶</h2>
+                        <p class="featured-desc">
+                            被小绿叶蝉亲吻过的茶，自带天然蜜香与熟果香。<br />
+                            来自广东河源紫金县，是家乡山水孕育的独特味道。
+                        </p>
+                        <div class="featured-tags">
+                            <span>📍 广东 · 紫金</span>
+                            <span>🐛 小绿叶蝉叮咬</span>
+                            <span>🍯 蜜香型</span>
+                        </div>
+                        <a href="zijin-chancha.html" class="btn">了解更多 →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+    <div class="container">
+        <p>🍃 茶文化科普 · 用心传递茶之美</p>
+        <p style="font-size:13px; margin-top:4px;">
+            <a href="sitemap.html" style="color:rgba(255,255,255,0.6);">🗺️ 网站地图</a>
+        </p>
+        <p class="footer-small">本网站仅供学习交流使用 | 图片来自网络</p>
+    </div>
+    </footer>
+</body>
+</html>

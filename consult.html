@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>在线咨询 - 茶文化科普</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">🍃 茶文化<span>科普</span></a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">首页</a></li>
+                    <li class="has-dropdown">
+                        <a href="category.html">茶叶百科 ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="category.html">茶叶种类</a></li>
+                            <li><a href="detail.html?type=green">六大茶类详情</a></li>
+                            <li><a href="famous-tea.html">中国名茶榜</a></li>
+                            <li><a href="zijin-chancha.html">紫金蝉茶</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="history.html">茶文化 ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="history.html">茶的历史</a></li>
+                            <li><a href="tea-culture.html">茶道与哲学</a></li>
+                            <li><a href="etiquette.html">茶的礼仪</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="knowledge.html">科普中心 ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="knowledge.html">科普知识</a></li>
+                            <li><a href="tea-benefits.html">茶叶健康功效</a></li>
+                            <li><a href="brewing-guide.html">冲泡指南</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="teaware.html">茶具图鉴</a></li>
+                    <li><a href="consult.html" class="active">在线咨询</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>💬 在线咨询</h1>
+                <p>关于茶的问题，欢迎留言交流</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1100px; margin: 0 auto;">
+                    <div style="background:#fff; padding:36px 32px; border-radius:16px; box-shadow:0 4px 16px rgba(0,0,0,0.06);">
+                        <h3 style="font-size:22px; color:#2d5016; margin-bottom:6px;">📝 留下你的问题</h3>
+                        <p style="color:#888; font-size:14px; margin-bottom:20px;">我们会尽快回复你</p>
+
+                        <form id="consultForm" onsubmit="handleSubmit(event)">
+                            <div style="margin-bottom:16px;">
+                                <label style="display:block; font-weight:600; font-size:14px; color:#333; margin-bottom:4px;">你的称呼 <span style="color:#c0392b;">*</span></label>
+                                <input type="text" id="name" placeholder="请输入你的名字" required
+                                       style="width:100%; padding:10px 14px; border:2px solid #e8e0d6; border-radius:8px; font-size:15px; outline:none; transition:0.3s;"
+                                       onfocus="this.style.borderColor='#2d5016'" onblur="this.style.borderColor='#e8e0d6'" />
+                            </div>
+
+                            <div style="margin-bottom:16px;">
+                                <label style="display:block; font-weight:600; font-size:14px; color:#333; margin-bottom:4px;">邮箱地址</label>
+                                <input type="email" id="email" placeholder="example@email.com"
+                                       style="width:100%; padding:10px 14px; border:2px solid #e8e0d6; border-radius:8px; font-size:15px; outline:none; transition:0.3s;"
+                                       onfocus="this.style.borderColor='#2d5016'" onblur="this.style.borderColor='#e8e0d6'" />
+                            </div>
+
+                            <div style="margin-bottom:16px;">
+                                <label style="display:block; font-weight:600; font-size:14px; color:#333; margin-bottom:4px;">咨询类型</label>
+                                <select id="type"
+                                        style="width:100%; padding:10px 14px; border:2px solid #e8e0d6; border-radius:8px; font-size:15px; outline:none; background:#fff; cursor:pointer; transition:0.3s;"
+                                        onfocus="this.style.borderColor='#2d5016'" onblur="this.style.borderColor='#e8e0d6'">
+                                    <option value="茶叶知识">茶叶知识</option>
+                                    <option value="冲泡方法">冲泡方法</option>
+                                    <option value="茶具选择">茶具选择</option>
+                                    <option value="茶文化历史">茶文化历史</option>
+                                    <option value="紫金蝉茶">紫金蝉茶</option>
+                                    <option value="其他">其他</option>
+                                </select>
+                            </div>
+
+                            <div style="margin-bottom:20px;">
+                                <label style="display:block; font-weight:600; font-size:14px; color:#333; margin-bottom:4px;">留言内容 <span style="color:#c0392b;">*</span></label>
+                                <textarea id="message" rows="5" placeholder="请详细描述你的问题..."
+                                          required
+                                          style="width:100%; padding:10px 14px; border:2px solid #e8e0d6; border-radius:8px; font-size:15px; outline:none; resize:vertical; font-family:inherit; transition:0.3s;"
+                                          onfocus="this.style.borderColor='#2d5016'" onblur="this.style.borderColor='#e8e0d6'"></textarea>
+                            </div>
+
+                            <button type="submit"
+                                    style="width:100%; padding:12px; background:#2d5016; color:#fff; border:none; border-radius:8px; font-size:17px; font-weight:600; cursor:pointer; transition:0.3s;">
+                                ✉️ 提交留言
+                            </button>
+                        </form>
+
+                        <div id="submitSuccess" style="display:none; margin-top:16px; padding:14px; background:#d4edda; border-radius:8px; color:#155724; text-align:center; font-weight:600;">
+                            ✅ 提交成功！感谢你的留言，我们会尽快回复。
+                        </div>
+                    </div>
+                    <div>
+                        <div style="background:#fff; padding:28px 24px; border-radius:16px; box-shadow:0 4px 16px rgba(0,0,0,0.06); margin-bottom:20px;">
+                            <h4 style="font-size:18px; color:#2d5016; margin-bottom:12px;">📌 常见问题</h4>
+                            <ul style="list-style:none; padding:0;">
+                                <li style="padding:8px 0; border-bottom:1px solid #f0ebe3;">
+                                    <a href="knowledge.html#benefits" style="color:#555; text-decoration:none; display:flex; justify-content:space-between; align-items:center; font-size:14px;">
+                                        喝茶有什么好处？
+                                        <span style="color:#c9a96e;">→</span>
+                                    </a>
+                                </li>
+                                <li style="padding:8px 0; border-bottom:1px solid #f0ebe3;">
+                                    <a href="knowledge.html#storage" style="color:#555; text-decoration:none; display:flex; justify-content:space-between; align-items:center; font-size:14px;">
+                                        如何正确保存茶叶？
+                                        <span style="color:#c9a96e;">→</span>
+                                    </a>
+                                </li>
+                                <li style="padding:8px 0; border-bottom:1px solid #f0ebe3;">
+                                    <a href="knowledge.html#physique" style="color:#555; text-decoration:none; display:flex; justify-content:space-between; align-items:center; font-size:14px;">
+                                        不同体质适合喝什么茶？
+                                        <span style="color:#c9a96e;">→</span>
+                                    </a>
+                                </li>
+                                <li style="padding:8px 0;">
+                                    <a href="category.html" style="color:#555; text-decoration:none; display:flex; justify-content:space-between; align-items:center; font-size:14px;">
+                                        六大茶类有哪些？
+                                        <span style="color:#c9a96e;">→</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="background:#fff; padding:28px 24px; border-radius:16px; box-shadow:0 4px 16px rgba(0,0,0,0.06);">
+                            <h4 style="font-size:18px; color:#2d5016; margin-bottom:12px;">📬 联系方式</h4>
+                            <p style="font-size:14px; color:#555; margin-bottom:6px;">📧 邮箱：tea@culture.com</p>
+                            <p style="font-size:14px; color:#555; margin-bottom:6px;">💬 微信：tea_culture</p>
+                            <p style="font-size:14px; color:#555; margin-bottom:0;">⏰ 回复时间：工作日 24 小时内</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+    <div class="container">
+        <p>🍃 茶文化科普 · 用心传递茶之美</p>
+        <p style="font-size:13px; margin-top:4px;">
+            <a href="sitemap.html" style="color:rgba(255,255,255,0.6);">🗺️ 网站地图</a>
+        </p>
+        <p class="footer-small">本网站仅供学习交流使用 | 图片来自网络</p>
+    </div>
+    </footer>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !message) {
+                alert('请填写你的称呼和留言内容');
+                return;
+            }
+            document.getElementById('submitSuccess').style.display = 'block';
+            document.getElementById('consultForm').reset();
+            setTimeout(() => {
+                document.getElementById('submitSuccess').style.display = 'none';
+            }, 5000);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+</html>
